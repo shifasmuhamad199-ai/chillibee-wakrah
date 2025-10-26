@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHILLIBEES RESTAURANT | Authentic Flavors | Qatar</title>
+    
+    <meta name="description" content="CHILLIBEES RESTAURANT in Qatar offers authentic flavors and exceptional dining experience. Call +974 5597 7712">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #FF9800;
+            --accent-color: #22C55E;
+            --dark-bg: #000000;
+            --medium-bg: #111;
+            --light-bg: #222;
+            --text-light: #fff;
+            --text-muted: #ddd;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: var(--dark-bg);
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .title-container {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .chillibees-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            color: #FF9800;
+            letter-spacing: 6px;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1;
+        }
+
+        .restaurant-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #22C55E;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        /* Dual Tone Call Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #000000 0%, #000000 45%, var(--accent-color) 45%, var(--accent-color) 100%);
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            border: 2px solid var(--accent-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(34, 197, 94, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(34, 197, 94, 0.6);
+            border-color: white;
+        }
+
+        .phone-icon {
+            font-size: 1.2rem;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Social Links */
+        .social-section {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .social-container {
+            background: var(--medium-bg);
+            border-radius: var(--border-radius);
+            padding: 2.5rem;
+            max-width: 420px;
+            width: 100%;
+            border: 1px solid #333;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-light);
+            padding: 1.2rem 1.5rem;
+            border-radius: var(--border-radius);
+            background: var(--light-bg);
+            gap: 18px;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .social-item:hover {
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(255, 152, 0, 0.2);
+        }
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 1.4rem;
+        }
+
+        .whatsapp { background: #25D366; }
+        .instagram { background: #E4405F; }
+        .facebook { background: #1877F2; }
+        .menu { background: var(--primary-color); }
+        .call { background: var(--accent-color); }
+
+        .social-content {
+            flex-grow: 1;
+        }
+
+        .social-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .social-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Floating Call Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: linear-gradient(135deg, #000000 0%, #000000 45%, var(--accent-color) 45%, var(--accent-color) 100%);
+            color: white;
+            padding: 16px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid var(--accent-color);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 6px 25px rgba(34, 197, 94, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .floating-cta:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(34, 197, 94, 0.7);
+            animation: none;
+        }
+
+        .floating-phone-icon {
+            font-size: 1.2rem;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--medium-bg);
+            color: var(--text-muted);
+            margin-top: auto;
+            border-top: 2px solid var(--primary-color);
+        }
+
+        .contact-info {
+            margin: 1rem 0;
+        }
+
+        .restaurant-name {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .contact-icon {
+            color: var(--accent-color);
+        }
+
+        .hours {
+            color: var(--accent-color);
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .location {
+            color: var(--primary-color);
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 1.5rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+            }
+            
+            .chillibees-text {
+                font-size: 3.5rem;
+                letter-spacing: 4px;
+            }
+            
+            .restaurant-text {
+                font-size: 1.8rem;
+                letter-spacing: 3px;
+            }
+            
+            .social-container {
+                padding: 2rem;
+            }
+            
+            .cta-button, .floating-cta {
+                padding: 12px 24px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .chillibees-text {
+                font-size: 2.5rem;
+                letter-spacing: 3px;
+            }
+            
+            .restaurant-text {
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+            }
+            
+            .social-container {
+                padding: 1.5rem;
+            }
+            
+            .floating-cta {
+                bottom: 20px;
+                right: 20px;
+                padding: 14px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="title-container">
+            <div class="chillibees-text">CHILLIBEES</div>
+            <div class="restaurant-text">RESTAURANT</div>
+        </div>
+        <div class="tagline">Authentic Flavors • Exceptional Dining Experience</div>
+        <a href="tel:+97455977712" class="cta-button">
+            <span class="phone-icon">📞</span>
+            CALL NOW
+        </a>
+    </header>
+
+    <!-- Social Links -->
+    <section class="social-section">
+        <div class="social-container">
+            <a href="tel:+97455977712" class="social-item">
+                <div class="social-icon call">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="social-content">
+                    <div class="social-title">Call Us</div>
+                    <div class="social-desc">+974 5597 7712</div>
+                </div>
+            </a>
+            
+            <a href="https://wa.me/97455977712" class="social-item" target="_blank">
+                <div class="social-icon whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="social-content">
+                    <div class="social-title">WhatsApp</div>
+                    <div class="social-desc">Message Us Directly</div>
+                </div>
+            </a>
+            
+            <a href="https://www.instagram.com/chillibeesrestaurant" class="social-item" target="_blank">
+                <div class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="social-content">
+                    <div class="social-title">Instagram</div>
+                    <div class="social-desc">@chillibeesrestaurant</div>
+                </div>
+            </a>
+            
+            <a href="https://www.facebook.com/share/1CjUBakT7j/?mibextid=wwXIfr" class="social-item" target="_blank">
+                <div class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-content">
+                    <div class="social-title">Facebook</div>
+                    <div class="social-desc">Follow Our Page</div>
+                </div>
+            </a>
+            
+            <a href="menu.pdf" class="social-item" download>
+                <div class="social-icon menu">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <div class="social-content">
+                    <div class="social-title">Menu</div>
+                    <div class="social-desc">Download PDF Menu</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating Button -->
+    <a href="tel:+97455977712" class="floating-cta">
+        <span class="floating-phone-icon">📞</span>
+        CALL NOW
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="contact-info">
+            <div class="restaurant-name">CHILLIBEES RESTAURANT</div>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <span>+974 5597 7712</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock contact-icon"></i>
+                    <span class="hours">Opening Hours: 5:00 AM - 1:00 AM</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <span class="location">Near Kim's Hospital Al Wakrah</span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">&copy; 2024 CHILLIBEES RESTAURANT. All rights reserved.</div>
+    </footer>
+</body>
+</html>
